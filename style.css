@@ -1,0 +1,741 @@
+
+body { 
+  background-image : url(images/3fa558c937f377615ef2c5c7e0fd399c.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: cover; /* adapte l’image à l’écran */
+  background-position: center;
+  background-attachment: fixed; /* fond fixe */
+  z-index: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d3d3d3;
+    margin: 0;
+    padding: 0; 
+}
+ body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(199, 214, 132, 0.219); /* filtre doré transparent */
+      opacity: 0; /* invisible au début */
+      transition: opacity 0.4s linear;
+      z-index: -1; /* derrière le contenu */
+    }
+
+ body.scrolled::before {
+      opacity: 1; /* devient visible progressivement */
+}
+.cadre {
+      background-color: #1b2735; /* bleu marine plein */
+      max-width: 900px;          /* largeur du cadre */
+      margin: 60px auto;         /* centré avec marge en haut/bas */
+      padding: 40px;
+      border-radius: 20px;       /* coins arrondis */
+      box-shadow: 0 0 20px rgba(0,0,0,0.6); /* ombre douce */
+    }
+
+header {
+    
+    background-color: rgba(255, 0, 0, 0,7)
+    }
+
+    
+.hero {
+      height: 100vh; /* prend toute la hauteur de l’écran */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+
+.hero h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: rgba(255,255,255,0.9); /* blanc légèrement transparent */
+      background-color: rgba(0,0,0,0.4); /* option : effet semi-transparent derrière le texte */
+      padding: 20px 40px;
+      border-radius: 10px;
+}
+
+/* SECTION INTRODUCTION */
+.intro-title {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      margin-left: 70px;
+      margin-right: 70px;
+      color: rgba(255,255,255,0.95);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* petit effet lumineux */
+}
+.article {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      margin-left: 130px;
+      margin-right: 130px;
+      color: rgba(255, 255, 255, 0.95);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* petit effet lumineux */
+}
+em {
+  font-style: italic; /* déjà par défaut */
+  color: rgb(240, 248, 102); /* un ton plus doux */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+h1 {text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      margin-left: 70px;
+      margin-right: 70px;
+      color: rgba(255,255,255,0.95);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* petit effet lumineux */
+}
+
+h3, h4 {
+    color: #c5bbae; 
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+
+
+p {
+    line-height: 1.6;
+    text-align: center;
+
+}
+
+p strong {
+    color:  #fafa97;
+}
+     
+
+
+.section {
+    margin-bottom: 40px;
+}
+
+a {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #1b2735; 
+    text-decoration: underline;
+}
+
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    filter: saturate(120%) contrast(120%);
+}
+ul{
+    color: #ff6f00;
+    list-style-type: disc;
+    background: rgba(0, 0, 0, 0.1);
+}
+footer {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+
+
+/* Navigation principale */
+nav {
+  background: #112339; /* bleu marine très foncé */
+  color: #d3d3d3;
+  padding: 0.5em 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+   font-family: 'Montserrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Police uniquement ici */
+}
+
+
+/* Structure UL */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Liens principaux */
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  padding: 0.5em 2em;
+  color: #d3d3d3;
+  text-decoration: none;
+  display: block;
+  height: 33px;
+  line-height: 33px;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+/* Hover principal */
+nav a:hover {
+  background: #fafa97; /* taupe doux */
+}
+
+/* Sous-menus */
+nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #112339; /* même bleu foncé */
+  display: none;
+  min-width: 200px;
+  font-size: smaller;
+  text-align: left;
+  z-index: 1000;
+  padding: 0;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+/* Items du sous-menu */
+nav ul li ul li a {
+  padding: 0.5em 1em;
+  height: auto;
+  line-height: normal;
+  border-top: 1px solid #4d5d6c;
+}
+
+/* Hover dans sous-menu */
+nav ul li ul li a:hover {
+  background: #fafa97; /* taupe plus clair pour sous-menu */
+  color: #1b2735; /* contraste */
+}
+
+/* Contenu */
+#contenu {
+  border: 2px solid #8b5e3c;
+  margin: 80px 0 0 0;
+  padding: 20px;
+  font-family: inherit;
+}
+/* Items du sous-menu */
+nav ul li ul li a {
+  position: relative;
+  padding: 0.5em 2.5em 0.5em 1em;
+  height: auto;
+  line-height: normal;
+  border-top: 1px solid #4d5d6c;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: #d3d3d3; /* Taupe par défaut */
+}
+
+/* Flèche SVG stylisée */
+nav ul li ul li a::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='currentColor' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path d='M2 0l4 4-4 4z'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.7;
+}
+
+/* Hover : fond clair, couleur texte (et flèche) bleu marine */
+nav ul li ul li a:hover {
+  background: #fafa97; /* taupe clair */
+  color: #112339;       /* bleu marine foncé */
+}
+
+nav ul li ul li a:hover::after {
+  transform: translate(4px, -50%);
+  opacity: 1;
+}
+
+/* Section principale */
+.sources-section {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  background-color: rgba(7, 18, 33, 0.9);
+  padding: 40px 60px;
+  border-radius: 25px;
+  max-width: 1100px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.content-box h1 {
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.intro-text {
+  font-size: 1.1em;
+  color: #dcdcdc;
+  margin-bottom: 40px;
+}
+
+/* Grille de cartes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+/* Carte source */
+.source-card {
+  background: linear-gradient(145deg, #0d2238, #142f4e);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.source-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 215, 53, 0.5);
+}
+
+.source-card h2 {
+  color: #fafa97;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.source-card p {
+  color: #d3d3d3;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+.source-card a {
+  color: #a89f91;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.source-card a:hover {
+  text-decoration: underline;
+  color: #f7f76c;
+}
+/* Effet fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 30px 20px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+#introduction {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.carousel-container-3d {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  perspective: 1200px;
+}
+
+
+
+
+.carousel-3d {
+  position: relative;
+  height: auto; /* plus de hauteur fixe */
+}
+
+.carousel-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.9)  rotateY(30deg);
+  transition: all 0.8s ease;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  overflow: hidden;
+  background: rgba(10, 10, 20, 0.85);
+}
+
+.carousel-card.active {
+  opacity: 1;
+  position: relative;
+  transform: scale(1) rotateY(0deg);
+  z-index: 2;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: auto; /* conserve le ratio original */
+  display: block;
+}
+
+
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 3;
+}
+
+.carousel-btn:hover {
+  background: rgba(255,255,255,0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .carousel-card {
+    height: 350px;
+  }
+  .caption {
+    font-size: 1em;
+  }
+}
+.problematique-bandeau {
+  margin: 80px auto;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 20px;
+  background: linear-gradient(
+    120deg,
+    hsla(227, 47%, 19%, 0.9),
+    rgba(32, 51, 114, 0.9),
+    rgba(25,35,70,0.9)
+  );
+  background-size: 300%;
+  animation: gradientShift 8s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(50,100,200,0.4);
+  backdrop-filter: blur(4px);
+}
+
+.problematique-bandeau::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+  animation: shineMove 5s infinite ease-in-out;
+}
+
+.problematique-bandeau p {
+  font-size: 1.8em;
+  color: rgba(248, 238, 168, 0.95);
+  font-style: italic;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+.problematique-bandeau p span {
+  font-style: normal;
+  font-weight: 700;
+  color: rgba(255,215,0,0.9);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255,215,0,0.4);
+}
+
+/* Animation du fond dégradé */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animation du reflet lumineux */
+@keyframes shineMove {
+  0% { left: -50%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .problematique-bandeau p {
+    font-size: 1.3em;
+  }
+}
+/* Section globale */
+.portrait-identity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 0;
+}
+
+/* Conteneur circulaire avec image en fond */
+.portrait-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;           /* Remplit entièrement le cercle */
+  background-position: center;      /* Centre le visage */
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+  filter: grayscale(100%);
+}
+
+.portrait-container:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+/* Superposition texte */
+.portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 25, 47, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+  opacity: 0;
+  transition: opacity 1.5s;
+  border-radius: 50%;
+}
+
+.portrait-container:hover .portrait-overlay {
+  opacity: 1;
+}
+
+/* Texte dans l'overlay */
+.portrait-overlay h3 {
+  color: #fdd835;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+.portrait-overlay p {
+  font-size: 0.9em;
+  line-height: 1.4em;
+  color: #e0e0e0;
+}
+
+/* --- SECTION GLOBALE --- */
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: 5em auto;
+  height: 200px;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- LIGNE PRINCIPALE --- */
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #f4d547, #183454, #f4d547);
+  background-size: 200%;
+  border-radius: 2px;
+  animation: glowLine 5s infinite linear;
+  transform: translateY(-50%);
+}
+
+@keyframes glowLine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* --- ÉVÉNEMENTS --- */
+.timeline-event {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  cursor: pointer;
+}
+
+/* --- POINTS --- */
+.timeline-dot {
+  width: 22px;
+  height: 22px;
+  background-color: #fee36d;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 15px rgba(253, 216, 53, 0.7);
+  transition: all 0.4s ease;
+}
+
+.timeline-event:hover .timeline-dot {
+  transform: scale(1.3);
+  box-shadow: 0 0 25px rgba(253, 216, 53, 0.9);
+}
+
+/* --- ANNÉES --- */
+.timeline-year {
+  margin-top: 0.7em;
+  color: #fce994;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+/* --- TEXTE DESCRIPTIF --- */
+.timeline-text {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  width: 250px;
+  background: rgba(7, 24, 50, 0.76);
+  color: white;
+  padding: 1em 1.2em;
+  border-radius: 12px;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  transition: all 0.8s ease-in-out;
+}
+
+/* --- Apparition fluide --- */
+.timeline-event:hover .timeline-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* --- Petite flèche sous la boîte --- */
+.timeline-text::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: rgba(10, 25, 47, 0.95) transparent transparent transparent;
+}
+
+.duo-rideau {
+  display: flex;
+  height: 400px;
+  margin: 80px auto;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.panel {
+  flex: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: flex 0.8s ease;
+  position: relative;
+}
+
+.panel:hover {
+  flex: 3;
+}
+
+

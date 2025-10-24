@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>La lutte contre le terrorisme dans l'Europe</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+<nav id="exemple2">
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+
+    <li><a href= "#">L'histoire </a>
+      <ul>
+        <li><a href="page_1.html">Promotions de lutte et débuts</a></li>
+        <li><a href="page_2.html">Construction d'un cadre commun</a></li>
+        <li><a href="page_3.html">Adoption de la stratégie</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Les stratégies européennes</a>
+      <ul>
+        <li><a href="page_4.html">L’action limitée du Conseil de l’Europe</a></li>
+        <li><a href="page_5.html">Les mesures législatives et techniques récentes</a></li>
+        <li><a href="pages_6.html">Dans le monde/nouvelles menaces</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">L'Europe dans le monde</a>
+      <ul>
+        <li><a href="page_7.html">Cadre européen limité</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Conclusion</a>
+      <ul>
+        <li><a href="Conclusion.html">Conclusion</a></li>
+        <li><a href="Sources.html">Sources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+ </header>
+
+<section class="hero">
+    <h1>La lutte contre le terrorisme dans l'UE</h1>
+  </section>
+
+<!-- SECTION H2 -->
+  <h2 class="intro-title">Introduction</h2>
+
+<section id="introduction">
+  <h1>
+Le terrorisme constitue une menace permanente pour l'Union européenne (UE) 
+</h1>
+  <div class="carousel-container-3d">
+    <button class="carousel-btn prev">&#10094;</button>
+
+    <div class="carousel-3d">
+      <div class="carousel-card active">
+        <img src="images/1.png" alt="Lutte contre le terrorisme - partie 1">
+      </div>
+      <div class="carousel-card">
+        <img src="images/2.png" alt="Lutte contre le terrorisme - partie 2">
+      </div>
+      <div class="carousel-card">
+        <img src="images/Capture d'écran 2025-10-16 173615.png" alt="Lutte contre le terrorisme - partie 3">
+      </div>
+      <div class="carousel-card">
+        <img src="https://www.europarl.europa.eu/resources/library/images/20250130PHT26573/20250130PHT26573_original.png" alt="Parlement européen">
+      </div>
+    </div>
+
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+<h1>La sécurité est surtout une compétence nationale mais le rôle de l’UE réside surtout sa capacité à faciliter la coopération entre les Etats-membres en matière de lutte contre le terrorisme
+<h1 class= "article">La lutte contre le terrorisme est, selon le traité de Lisbonne (2007), une compétence partagée entre l’UE et ses États membres : <em> « œuvre pour assurer un  niveau élevé de sécurité par des mesures de prévention [...] ainsi que [...] par des mesures de coordination et de coopération entre autorités policières et  judiciaires [...] et, si nécessaire, par le rapprochement des législations pénales » </em>(art. 67).</h1>
+<div class="cadre">
+
+<p><strong>Définition historique :</strong> </p><p>“Le terrorisme émerge dans l’Europe du XIXe siècle[...] [puis] importé en Russie, il y est théorisé par les nihilistes. Le mot terrorisme trouve alors son acception contemporaine : une violence émanant de groupes minoritaires, et visant, à travers un
+individu considéré comme représentatif, le bouleversement d’un ordre politique et social.” Gilles Ferragu </p>
+
+<p> <strong>Définition :</strong></p>
+<p>L’ONU rescence plus de 140 acceptations du terme de terrorisme. L’Union européenne dispose d’une définition commune qui permet une même base légale pour coordonner les moyens d’action et d’harmoniser les peines. Pour l’UE la notion d’infraction terroriste repose sur une combinaison : 
+<li>d’éléments objectifs... : homicide, préjudices corporels, prise d’otage, chantage, attentats, menaces, etc.</li>
+<li>...et d’éléments subjectifs : actes commis dans le but de gravement intimider une population, de déstabiliser ou de détruire des structures d’un pays ou d’une organisation internationale, d’empêcher un gouvernement d’agir.</li></p>
+
+<p>Et d’après la <strong>Directive 2017/541 du Parlement européen et du Conseil du 15 mars 2017 </strong>relative à la lutte contre le terrorisme, les infractions terroristes sont des actes commis dans l'un des buts suivants:
+<li>gravement intimider une population</li>
+<li>contraindre des pouvoirs publics à accomplir ou à s'abstenir d'accomplir un acte quelconque</li>
+<li>gravement déstabiliser ou détruire les structures politiques, constitutionnelles, économiques ou sociales fondamentales d'un pays ou d'une organisation internationale</li>
+</p>
+</div>
+<div class="problematique-bandeau">
+  <p>Comment l’Union Européenne tente-t-elle de lutter contre le terrorisme&nbsp;?</p>
+</div>
+
+<script>
+    // ajoute la classe "scrolled" quand on dépasse le H1
+    window.addEventListener("scroll", function() {
+      const heroHeight = document.querySelector(".hero").offsetHeight;
+      if (window.scrollY > heroHeight / 3) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    });
+
+
+  const cards = document.querySelectorAll('.carousel-card');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let current = 0;
+
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      card.classList.remove('active');
+      if (i === index) card.classList.add('active');
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % cards.length;
+    showCard(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
+  });
+
+
+  </script>
+
+
+
+
+
+
+<footer>
+  <p>La lutte contre le terrorisme dans l'UE.</p><p> TON-THAT SCHMITT Eliot, TRESCH Emilie, MEGNAFI Elise et SEIGNEZ Oriana de la terminale DURAS.</p></footer>
+</body>
+
+</html>

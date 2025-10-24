@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>La lutte contre le terrorisme dans l'Europe</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+<nav id="exemple2">
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+
+    <li><a href= "#">L'histoire </a>
+      <ul>
+        <li><a href="page_1.html">Promotions de lutte et débuts</a></li>
+        <li><a href="page_2.html">Construction d'un cadre commun</a></li>
+        <li><a href="page_3.html">Adoption de la stratégie</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Les stratégies européennes</a>
+      <ul>
+        <li><a href="page_4.html">L’action limitée du Conseil de l’Europe</a></li>
+        <li><a href="page_5.html">Les mesures législatives et techniques récentes</a></li>
+        <li><a href="pages_6.html">Dans le monde/nouvelles menaces</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">L'Europe dans le monde</a>
+      <ul>
+        <li><a href="page_7.html">Cadre européen limité</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Conclusion</a>
+      <ul>
+        <li><a href="Conclusion.html">Conclusion</a></li>
+        <li><a href="Sources.html">Sources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+ </header>
+
+<section class="hero">
+    <h1>II. Les stratégies européennes récentes</h1>
+  </section>
+
+<!-- SECTION H2 -->
+  <h2 class="intro-title">Introduction</h2>
+
+<section id="introduction">
+  <h1>
+C. L'Europe dans le monde 
+</h1>
+
+</section>
+<div class="cadre">
+
+<p><em>"La coopération internationale est évidemment clé pour lutter contre le terrorisme car, nous le savons, il ne connait pas frontières. Nous devons utiliser les enceintes de dialogue déjà existantes, comme celles des Nations-Unies pour unir nos forces partout où la menace terroriste existe. "</em> d'après Bartjan WEGTER.
+</p>
+
+<p>Les autorités américaines (ainsi qu'Interpol) coopèrent avec les agences Europol et Eurojust. Un accord euro-américain a été conclu dès 2012 sur le transfert de données relatives aux passagers des vols aériens par exemple.
+</p>
+</div>
+ <section id="introduction"><h1>
+D. De nouvelles menaces.
+</h1>
+</section>
+
+<h1>Les Stratégie de l’UE vise ainsi surtout le terrorisme islamiste.
+Mais désormais une attention accrue est accordée à d'autres mouvements notamment l’ultra-droite violente, et les radicaux d’ultra-gauche.
+</h1>
+<section class="duo-rideau">
+  <div class="panel" style="background-image: url('images/attentas\ graph.png');">
+  </div>
+  <div class="panel" style="background-image: url('images/Attentats\ types.png');">
+  </div>
+</section>
+
+
+<script>
+    // ajoute la classe "scrolled" quand on dépasse le H1
+    window.addEventListener("scroll", function() {
+      const heroHeight = document.querySelector(".hero").offsetHeight;
+      if (window.scrollY > heroHeight / 3) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    });
+
+
+  const cards = document.querySelectorAll('.carousel-card');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let current = 0;
+
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      card.classList.remove('active');
+      if (i === index) card.classList.add('active');
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % cards.length;
+    showCard(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + cards.length) % cards.length;
+    showCard(current);
+  });
+
+
+  </script>
+
+
+<footer>
+  <p>La lutte contre le terrorisme dans l'UE.</p><p> TON-THAT SCHMITT Eliot, TRESCH Emilie, MEGNAFI Elise et SEIGNEZ Oriana de la terminale DURAS.</p></footer>
+</body>
+
+</html>
